@@ -24,7 +24,7 @@
 <!-- 支持Firefox for android 和 MacOSX -->
 <script>
 	window.onload = function () {
-		if ('ondevicelight' in window) {
+			if ('ondevicelight' in window) {
 			window.addEventListener('devicelight', function (event) {
 				var body = document.querySelector('body');
 				if (event.value < 50) {
@@ -37,6 +37,7 @@
 			});
 		} else {
 			console.log('不支持 devicelight 事件');
+			alert('不支持 devicelight 事件');
 		}
 	}
 </script>
